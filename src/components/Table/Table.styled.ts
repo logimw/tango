@@ -1,32 +1,65 @@
 import styled from "styled-components";
 
 export const StyledTable = styled.div`
-  height: 90%;
-  background-color: #fff;
-  grid-column: 2;
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem;
+  .table-wrapper {
+    max-height: calc(100vh - 28rem - 10vh);
+    overflow-y: scroll;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    form {
+      position: relative;
+    }
+
+    label {
+      position: absolute;
+      top: -13px;
+    }
+  }
 
   table {
     width: 100%;
-    font-size: ${({ theme }) => theme.fontSize.m};
+    position: relative;
 
-    thead tr {
-      background-color: #9dd0c3;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+
+      tr {
+        background-color: ${({ theme }) => theme.colors.secondary};
+        font-weight: 300;
+      }
+    }
+
+    tbody {
+      position: relative;
     }
 
     tr {
-      //box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-
       &:nth-child(even) {
         background-color: ${({ theme }) => theme.colors.primary};
       }
+    }
+
+    th {
+      font-family: "Got", serif;
+      font-size: ${({ theme }) => theme.fontSize.s};
+    }
+
+    td {
+      font-size: ${({ theme }) => theme.fontSize.m};
     }
 
     td,
     th {
       padding: 0.5rem;
       box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1);
+      font-weight: normal;
     }
   }
 `;

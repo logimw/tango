@@ -8,6 +8,12 @@ export const StyledLogo = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
 
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
   img {
     height: 100%;
   }

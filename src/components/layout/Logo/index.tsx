@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledLogo } from "./Logo.styled";
+import { Link } from "react-router-dom";
 
 interface Props {
   logo: string;
@@ -9,7 +10,9 @@ interface Props {
 const Logo = ({ logo, alt }: Props) => {
   return (
     <StyledLogo>
-      <img src={logo} alt={alt} />
+      <Link to={"/"}>
+        <img src={logo} alt={alt} />
+      </Link>
     </StyledLogo>
   );
 };

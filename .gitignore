@@ -2,6 +2,9 @@
 # editor files
 /.idea
 
+#env
+.env
+
 # dependencies
 /node_modules
 /.pnp
@@ -9,6 +12,9 @@
 
 # testing
 /coverage
+
+# unused types
+/types/unused
 
 # production
 /build
