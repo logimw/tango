@@ -6,9 +6,11 @@ To run app locally:
 ```
 git clone https://github.com/logimw/tango
 cd tango
+there's env file. Example file is arleady filled with correct link, please copy "env.example" remove part ".example" from file name.
 npm install
 npm run start
 ```
+!!! there's env file. Example file is arleady filled with correct link, please copy "env.example" remove part ".example" from file name.
 
 App is also depolyed on netlify: [App](https://tango-mw.netlify.app).
 [![Netlify Status](https://api.netlify.com/api/v1/badges/89de7b41-92ca-4169-a8db-2c322fd18427/deploy-status)](https://app.netlify.com/sites/tango-mw/deploys)
