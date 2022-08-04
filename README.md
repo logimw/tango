@@ -11,6 +11,7 @@ npm run start
 ```
 
 App is also depolyed on netlify: [App](https://tango-mw.netlify.app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/89de7b41-92ca-4169-a8db-2c322fd18427/deploy-status)](https://app.netlify.com/sites/tango-mw/deploys)
 
 App uses data from [An API of Ice And Fire](https://anapioficeandfire.com)
 
