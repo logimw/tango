@@ -1,7 +1,13 @@
 import React, { useContext, useReducer } from "react";
 import { charactersReducer } from "reducers/charactersReducer";
 
-const initialState = { page: 1, limit: 25, gender: "Any", culture: "" };
+const initialState = {
+  page: 1,
+  limit: 25,
+  gender: "Any",
+  culture: "",
+  totalPages: 1,
+};
 // TODO: remove 'any' below
 const CharactersContext = React.createContext<null | any>(null);
 

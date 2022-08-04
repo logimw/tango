@@ -5,7 +5,7 @@ import { useCharacters } from "../../../providers/CharactersProvider";
 
 const Navigation = () => {
   const { characters, dispatch } = useCharacters();
-  const { page, limit } = characters;
+  const { page, totalPages } = characters;
   // TODO: disable buttons if last/first page
 
   return (
@@ -25,7 +25,7 @@ const Navigation = () => {
         </StyledNavBtn>
 
         <div className="page-counter">
-          Page {page} of {Math.ceil(2134 / limit!)}
+          Page {page} of {totalPages}
         </div>
       </>
     </StyledNavigation>

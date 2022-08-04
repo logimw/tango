@@ -20,6 +20,7 @@ export interface Character {
 type Genders = "Male" | "Female" | "Any";
 
 export interface ICharacters {
+  totalPages: number;
   page: number;
   limit: number;
   gender: Genders;

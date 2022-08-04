@@ -8,6 +8,7 @@ export const actionTypes = {
   setLimit: "SET_LIMIT",
   setGender: "SET_GENDER",
   setCulture: "SET_CULTURE",
+  setTotalPages: "SET_TOTAL_PAGES",
 };
 
 type FirstPageAction = {
@@ -35,17 +36,19 @@ export const charactersReducer = (state: ICharacters, action: Action) => {
       if (state.page === 1) return { ...state, page: 1 };
       return { ...state, page: state.page - 1 };
     case actionTypes.nextPage:
-      if (state.page === Math.ceil(2134 / state.limit))
-        return { ...state, page: Math.ceil(2134 / state.limit) };
+      if (state.page === state.totalPages)
+        return { ...state, page: state.totalPages };
       return { ...state, page: state.page + 1 };
     case actionTypes.lastPage:
-      return { ...state, page: Math.ceil(2134 / state.limit) };
+      return { ...state, page: state.totalPages };
     case actionTypes.setLimit:
       return { ...state, limit: action.payload, page: 1 };
     case actionTypes.setGender:
       return { ...state, gender: action.payload, page: 1 };
     case actionTypes.setCulture:
       return { ...state, culture: action.payload, page: 1 };
+    case actionTypes.setTotalPages:
+      return { ...state, totalPages: action.payload };
     default:
       throw new Error();
   }
